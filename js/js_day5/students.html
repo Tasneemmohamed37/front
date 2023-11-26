@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json q 3 & 4</title>
+</head>
+<body>
+    <h1>json q 3 & 4</h1>
+    <script>
+        var students = [
+    {
+        ID: 1,
+        Name: "Tasneem",
+        Age: 22,
+        Address: "Minia-egypt",
+        Skills: 
+            {
+                lang: ".net",
+                hobbies: "swimming"
+            }
+        ,
+        Isleader: true
+    },
+    {
+        ID: 2,
+        Name: "ayman",
+        Age: 25,
+        Address: "maadie-egypt",
+        Skills: 
+            { lang: "sys admin",
+            hobbies: "reading" },
+        Isleader: false
+    },
+    {
+        ID: 3,
+        Name: "zien",
+        Age: 20,
+        Address: null,
+        Skills: 
+            { lang: "python",
+            hobbies: "watching tv" },
+        Isleader: false
+    }
+]
+for(i of students){
+document.write(i.Name +'  has programming lang: ' + i.Skills.lang +"<br>")
+}
+    </script>
+</body>
+</html>

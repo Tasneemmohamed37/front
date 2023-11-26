@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h" style="text-align: center; background-color: gainsboro;"></h1>
+    <script>
+        // Suppose the URL is:
+        const url = window.location.href;
+
+        // Parse the query parameters into a URLSearchParams object
+        const searchParams = new URLSearchParams(new URL(url).search);
+
+        // Get the values of the "name" and "age" parameters
+        const name = searchParams.get("uname");
+
+        document.getElementById('h').innerHTML= 'welcome '+name ; // "John"
+    </script>
+    
+</body>
+
+</html>

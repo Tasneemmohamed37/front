@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font and column paragraph and tiger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
+    <style>
+        p {
+            font-family: 'Chakra Petch', sans-serif;
+            text-align: center;
+            font-size: 200;
+        }
+
+        .news {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: solid 3px red;
+            font-size: 20;
+        }
+
+        #tiger {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+
+        #tiger:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left:100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>tasneem</p>
+    <div class="news">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+        sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat. Ut wisi enim ad
+        minim veniam, quis nostrud exerci tation ullamcorper
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue
+        nihil imperdiet doming id quod mazim placerat facer possim assum.
+    </div>
+    <div id="tiger">
+        <img src="../../images/tiger.gif">
+    </div>
+</body>
+
+</html>

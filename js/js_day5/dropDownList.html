@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down list q 5 (b / c)</title>
+</head>
+
+<body>
+    <h1>drop down list q 5 (b / c)</h1>
+    Students Name
+    <select id="users" onchange="showUserSelected()"></select><br>
+    <div id="username"></div>
+    <img id="img">
+
+    <script>
+        const batchTrack = document.getElementById("users");
+
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "https://reqres.in/api/users/", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                dataParsed = JSON.parse(xhr.responseText);
+                for (i of dataParsed.data) {
+                    const newOption = document.createElement("option");
+                    console.log(i);
+                    newOption.value = i.first_name;
+                    newOption.text = i.first_name;
+                    batchTrack.appendChild(newOption);
+                }
+
+            }
+        }
+        xhr.send();
+
+        function showUserSelected() {
+            var userid = document.getElementById("users").selectedIndex;
+
+            document.querySelector("#username").innerHTML = dataParsed.data[userid].first_name + ' ' + dataParsed.data[userid].last_name;
+            document.querySelector("#img").src = dataParsed.data[userid].avatar;
+        }
+
+    </script>
+</body>
+
+</html>

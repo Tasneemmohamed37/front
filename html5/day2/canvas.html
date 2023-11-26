@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy/Sad</title>
+    <script>
+        // Function to draw a sad face image on the canvas
+        function drawSadFace() {
+            // Get the canvas element
+            var canvas = document.getElementById("myCanvas");
+
+            // Check if the canvas is supported by the browser
+            if (canvas.getContext) {
+                // Get the canvas context
+                var ctx = canvas.getContext("2d");
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // Create an image object
+                var img = new Image();
+
+                // Set the image source to the sad face image
+                img.src = "sad.png";
+
+                // Draw the sad face image on the canvas
+                img.onload = function () {
+                    ctx.drawImage(img, 0, 0);
+                };
+            }
+        }
+
+        // Function to draw a smile face image on the canvas
+        function drawSmileFace() {
+            // Get the canvas element
+            var canvas = document.getElementById("myCanvas");
+
+            // Check if the canvas is supported by the browser
+            if (canvas.getContext) {
+                // Get the canvas context
+                var ctx = canvas.getContext("2d");
+
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Create an image object
+                var img = new Image();
+
+                // Set the image source to the smile face image
+                img.src = "smiley.png";
+
+                // Draw the smile face image on the canvas
+                img.onload = function () {
+                    ctx.drawImage(img, 0, 0);
+                };
+            }
+        }
+
+        // Call the drawSadFace function when the page loads
+        window.onload = function () {
+            drawSmileFace();
+
+            // Add a click event listener to the canvas
+            var canvas = document.getElementById("myCanvas");
+            canvas.addEventListener("click", function () {
+                // Check if the canvas already displays the sad face image
+                if (canvas.getContext && canvas.getContext("2d").isPointInPath(event.offsetX, event.offsetY)) {
+                    // If it does, clear the canvas and draw the smile face image
+                    drawSmileFace();
+                } else {
+                    // If it doesn't, clear the canvas and draw the sad face image
+                    drawSadFace();
+                }
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="350" height="350"></canvas>
+</body>
+
+</html>

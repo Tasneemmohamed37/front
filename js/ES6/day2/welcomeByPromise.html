@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome by promise</title>
+</head>
+
+<body>
+    <h1 id="welcome_msg"></h1>
+    <img id="img" src = "../../../images/tasnm.jpg" alt="poor connection" width="100" height="100" style="display: none" >
+    <h1 id="thanxs_msg"></h1>
+
+    <script>
+        var welcome_promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                document.getElementById("welcome_msg").innerHTML = "welcome Y Tasneem";
+            }, 3000);
+        });
+
+        var img_promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // document.getElementById("img").src = "../../../images/tasnm.jpg";
+                document.getElementById("img").style.display="inline";
+            }, 4000);
+        });
+
+        var thanks_promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                document.getElementById("thanxs_msg").innerHTML = " thank you Tasneem";
+            }, 6000);
+        });
+
+
+
+
+        var redirect_page = new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                window.open("../day1/home.html");
+            }, 8000);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        nav,
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+        }
+
+        .clearfix {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>check more tasks</h1>
+    </header>
+    <nav>
+        <a href="home.html">HTML5</a> |
+        <a href="../../day3/HTML Page to Apply CSS.html">CSS3</a> |
+        <a href="../../js/js_day2/d.html">JavaScript</a>
+    </nav>
+    <div class="clearfix">
+        <div class="box">
+            <section>
+                <h2>Section</h2>
+                <p>This is some content in the first section.</p>
+            </section>
+
+            <article>
+                <h2>Article </h2>
+                <p>This is the main content of the page.</p>
+            </article>
+        </div>
+        <div class="box">
+            <aside>
+                <h2>Aside </h2>
+                <p>This is some related content that is not essential to the main content of the page.</p>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <p>Author: Tasneem Elhussiny</p>
+        <p><a href="mailto:tasnemmuhammad37@gmail.com">tasnemmuhammad37@gmail.com</a></p>
+        <p>Copyright © 2023</p>
+        <button onclick="getLocation()">Get location</button>
+        <p id="demo"></p>
+    </footer>
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>

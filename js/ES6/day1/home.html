@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="oddNum"></div><br>
+    <div id="evenNum"></div><br>
+    <div id="map"></div><br>
+    <div id="stud"></div><br>
+    <div id="set">Students using set : </div><br>
+    <h1> Tip of The Day</h1>
+    <p id="para"></p>
+    <script>
+        // alert((function (a, b) {
+        //     return (a + b)
+        // })(10, 2));
+
+        var arr = [1, 2, 3, 4, 5, 6];
+        let odd = arr.filter(i => i % 2 != 0)
+
+        document.getElementById('oddNum').innerHTML = 'odd num using filter ' + odd + '<br>';
+
+        let evenArr = [];
+        arr.forEach((e) => {
+            if (e % 2 == 0) {
+                evenArr = [...evenArr, e];
+            }
+        });
+        document.getElementById('evenNum').innerHTML = 'even num using foreach ' + evenArr + '<br>';
+
+        let square = arr.map(i => i * i)
+        document.getElementById('map').innerHTML = 'square of arr using map ' + square + '<br>';
+
+
+        let student = {
+            name: 'tasneem',
+            universty: 'minia',
+            faculty: 'fci',
+            finalGrade: '3.3',
+        }
+        document.getElementById('stud').innerHTML = `stud name ${student.name} in ${student.universty} universty ${student.faculty} with grad ${student.finalGrade}`;
+
+        let stud_set = new Set(["tasneem", "ayman", "laren"]);
+        for (i of stud_set) {
+            document.getElementById("set").innerHTML += i + " \n";
+        }
+
+        js_Tips = ['1. Have a Firm Grip on the Basics',
+            '2. Don’t Set Too Many Parameters',
+            '3. Don’t Randomly Name the Variables',
+            '4. Delete Deprecated Code',
+            '5. Split the Functionality',
+            '6. Don’t Write Meaningless Code Comments',
+            '7. Document Your Code',
+            '8. Use ESLint or Prettier',
+            '9. Don’t Ignore Code For Request Failures',
+            '10. Be Open to Code Reviews'];
+
+        function rand_tips() {
+            document.getElementById("para").innerHTML = js_Tips[Math.floor(Math.random() * 10)];
+        }
+        rand_tips();
+    </script>
+</body>
+
+</html>

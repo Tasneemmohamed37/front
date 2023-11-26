@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login screen</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+    <section>
+        <!-- login container  -->
+        <div>
+            <!-- form  -->
+            <div>
+                <h2>Sign Up</h2>
+
+                <!-- form input  -->
+                <form action="index.html">
+                    <input type="text" name="username" value="" id="username" placeholder="Enter Your username">
+                    <input type="email" name="email" value="" id="email" placeholder="Enter Your Email">
+                    <div>
+                        <input type="password" name="password" id="password" placeholder="Enter Your password ">
+                    </div>
+                    <div>
+                        <input type="password" name="confirmPassword" id="confirmPassword"
+                            placeholder="Re-Enter Your password ">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">remember me</label>
+                    </div>
+                    <button id="submit">Sign Up</button>
+                </form>
+                <div>
+                    <hr>
+                    <p>OR</p>
+                    <hr>
+                </div>
+                <a
+                    href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=ar&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-1610458733%3A1690517769317762">
+                    <span>Sign Up With Google</span></a>
+
+            </div>
+        </div>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+            import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyAAPS2Biu_JGeiI6JfdScN0hqhDP624d7c",
+                authDomain: "ecommerce-form-b6ab0.firebaseapp.com",
+                projectId: "ecommerce-form-b6ab0",
+                storageBucket: "ecommerce-form-b6ab0.appspot.com",
+                messagingSenderId: "1031959521389",
+                appId: "1:1031959521389:web:d58b4e4d19357e91dc3764"
+            };
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            //get ref to database services
+            const db = getDatabase(app);
+            document.getElementById("submit").addEventListener('click', function (e) {
+                e.preventDefault();
+                set(ref(db, 'user/' + document.getElementById("username").value),
+                    {
+                        username: document.getElementById("username").value,
+                        email: document.getElementById("email").value
+                    });
+                alert("login sucssesfull !");
+            })
+
+            // Get a reference to the desired location in the database
+            const userRef = ref(db, 'user/' + document.getElementById("username").value);
+
+            // Fetch the data from firebase
+            get(userRef)
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        // The data exists in the database
+                        const userData = snapshot.val();
+                        console.log(userData);
+                        // Process the fetched data as needed
+                    } else {
+                        // The data does not exist in the database
+                        console.log("No data found");
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        </script>
+    </section>
+</body>
+
+</html>

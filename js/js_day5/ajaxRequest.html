@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first name and avatar of specific id Q5(a)</title>
+</head>
+
+<body>
+    <h1>first name and avatar of specific id Q5(a)</h1>
+    <input type="number" id="userid" placeholder="please enter user id">
+    <button id="display-btn">display</button><br><br>
+    <div id="div"></div>
+    <img id="img">
+
+    <script>
+        
+        document.getElementById("display-btn").addEventListener("click", ajaxRequest);
+
+        function ajaxRequest() {
+
+            var uID = document.getElementById("userid").value;
+            var url =  "https://reqres.in/api/users/" + uID;
+            
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET',url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var dataParsed = JSON.parse(xhr.responseText);
+                    console.log(dataParsed.data);
+                    document.querySelector("#div").innerHTML = dataParsed.data.first_name + ' ' + dataParsed.data.last_name;
+                    document.querySelector("#img").src = dataParsed.data.avatar;
+                }
+            }
+            xhr.send();
+        }
+
+    </script>
+</body>
+
+</html>

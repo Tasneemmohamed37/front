@@ -1,0 +1,590 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #27643c;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #27643c;
+}
+
+h4 {
+    font-size: 20px;
+    color: #27643c;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #27643c;
+    margin: 15px 0 20px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #27643c;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+#page-header {
+    background-image: url("img/banner/b22.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header.about-header {
+    background-image: url("img/banner/b22.jpg");
+}
+
+/* contact page */
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details {
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form span {
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map {
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#form-details {
+    /* make form & people in one row */
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form {
+    /* to make form ele in one col */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button {
+    background-color: #27643c;
+    color: #fff;
+}
+
+#form-details .people div {
+    padding-bottom: 25px;
+    /* make img and details in one row */
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-details .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #27643c;
+}
+
+
+
+/* contact page */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("img/banner/b22.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: gainsboro;
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-family: 700;
+    color: #27643c;
+}
+
+#newsletter p {
+    font-size: 14px;
+    font-family: 600;
+    color: #27643c;
+}
+
+#newsletter p span {
+    color: #e6b33e;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.125em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #ced8d7;
+}
+
+#newsletter button {
+    background-color: #27643c;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #27643c;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img {
+    border: 1px solid #27643c;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer .follow a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+@media(max-width: 799px) {
+    /* contact page */
+
+    #form-details {
+        padding: 40px;
+    }
+
+    #form-details form {
+        width: 50%;
+    }
+}
+
+@media(max-width: 477px) {
+
+    /* contact page */
+    #contact-details {
+        flex-direction: column;
+    }
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #contact-details .map {
+        width: 100%;
+    }
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width:980px) {
+    #newsletter  {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+    }#newsletter .form ,
+    #newsletter .newstext {
+        width: 100%;
+        /* text-align: center; */
+    }
+}
+
+    </style>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUjNy_6HHhU6qrc0zqyJj8kupck2IXST8&libraries=places&callback=Function.prototype"></script>
+    <script>
+
+        let map, directionsService, directionsRenderer
+        let sourceAutocomplete, desAutocomplete
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 28.10869437531747, lng: 30.75207774654349 },
+                zoom: 13
+            })
+            google.maps.event.addListener(map, "click", function (event) {
+                this.setOptions({ scrollwheel: true })
+            })
+            directionsService = new google.maps.DirectionsService()
+            directionsRenderer = new google.maps.DirectionsRenderer()
+            directionsRenderer.setMap(map)
+
+            var source = "ITI - Information Technology Institute (AlMinya), Damaris, Minya, Egypt"
+            var dest = "Horus Resort Menia, Kornish Al Nile, الكورنيش، Minya, Egypt"
+
+            let request = {
+                origin: source,
+                destination: dest,
+                travelMode: 'DRIVING'
+            }
+            directionsService.route(request, function (result, status) {
+                if (status == 'OK') {
+                    directionsRenderer.setDirections(result)
+                }
+            })
+        }
+    </script>
+</head>
+
+<body onload="initMap()">
+    <!-- ((((((((((((((((((( start page header ))))))))))))))))))) -->
+    <section id="page-header" class="about-header">
+        <h2>#Let's_talk</h2>
+        <p>LEAVE A MESSAGE, we love to hear from you!</p>
+    </section>
+    <!-- ((((((((((((((((((( end page header ))))))))))))))))))) -->
+
+
+    <!-- ((((((((((((((((((( start contact details section))))))))))))))))))) -->
+    <section id="contact-details" class="section-p1">
+        <!-- ((((((((((((((((((( start details  ))))))))))))))))))) -->
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency location or contact us today</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class='fas fa-map-marker-alt'></i>
+                    <p>Taha Hussein St.El Minia</p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>contact@gmail.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+201028249977</p>
+                </li>
+                <li>
+                    <i class="far fa-clock"></i>
+                    <p>10:00 - 22:00, Sat - Thurs</p>
+                </li>
+            </div>
+        </div>
+        <!-- ((((((((((((((((((( end details ))))))))))))))))))) -->
+
+        <!-- ((((((((((((((((((( start map section ))))))))))))))))))) -->
+        <!-- <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.2567120706785!2d30.754116225312238!3d28.10820700769897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b24fc09ac17e9%3A0x1117c0c3168271b7!2z2LfZhyDYrdiz2YrZhtiMINmC2LPZhSDYp9mE2YXZhtmK2KfYjCDYp9mE2YXZhtmK2Kc!5e0!3m2!1sar!2seg!4v1690637804831!5m2!1sar!2seg"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+        <div class="map" id="map"></div>
+        <!-- ((((((((((((((((((( end map section  ))))))))))))))))))) -->
+    </section>
+    <!-- ((((((((((((((((((( end contact details section ))))))))))))))))))) -->
+
+
+    <!-- ((((((((((((((((((( start form section ))))))))))))))))))) -->
+    <section id="form-details">
+        <!-- ((((((((((((((((((( start form  ))))))))))))))))))) -->
+        <form action="">
+            <span>LEAVE A MESSAGE</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="Subject">
+            <textarea name="" id="" col="30" rows="10" placeholder="Your Message">
+            </textarea>
+            <button class="normal">Submit</button>
+
+        </form>
+        <!-- ((((((((((((((((((( end form ))))))))))))))))))) -->
+
+        <!-- ((((((((((((((((((( start people section  ))))))))))))))))))) -->
+        <div class="people">
+            <div>
+                <img src="img/people/1.png" alt="">
+                <p><span>Ahmed Muhammad</span> Senior Marketing Manager <br> Phone: +2012 8125
+                    6050 <br> E-mail: ahmed12@gmail.com</p>
+            </div>
+            <div>
+                <img src="img/people/2.png" alt="">
+                <p><span>Younis Khaled</span> Senior Marketing Manager <br> Phone: +2012 8125
+                    6050 <br> E-mail: younis12@gmail.com</p>
+            </div>
+            <div>
+                <img src="img/people/3.png" alt="">
+                <p><span>Tasneem Elhussiny</span> Senior Marketing Manager <br> Phone: +2012 8125
+                    6050 <br> E-mail: tasneem37@gmail.com</p>
+            </div>
+        </div>
+        <!-- ((((((((((((((((((( end people section ))))))))))))))))))) -->
+    </section>
+    <!-- ((((((((((((((((((( end form section ))))))))))))))))))) -->
+
+
+    <!-- ((((((((((((((((((((( start news letter ))))))))))))))))))))) -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For NewsLetters</h4>
+            <p><b>Get E-mail updates about latest shop and <span>special offers.</b></span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Email...">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <!-- ((((((((((((((((((((( end news letter ))))))))))))))))))))) -->
+
+
+    <!-- ((((((((((((((((((((( start footer ))))))))))))))))))))) -->
+    <footer class="section-p1">
+        <!-- ((((((((((((((((((((( start contact us section  ))))))))))))))))))))) -->
+        <div class="col">
+            <img class="logo" src="" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Taha Hussein St.El Minia</p>
+            <p><strong>Phone:</strong> +201028249977 </p>
+            <p><strong>Hours:</strong> 10:00 - 22:00, Sat - Thurs</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ((((((((((((((((((((( end contact us section))))))))))))))))))))) -->
+
+
+        <!-- ((((((((((((((((((((( start about section ))))))))))))))))))))) -->
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <!-- ((((((((((((((((((((( end about section ))))))))))))))))))))) -->
+
+
+        <!-- ((((((((((((((((((((( start my account section ))))))))))))))))))))) -->
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <!-- ((((((((((((((((((((( end my account section ))))))))))))))))))))) -->
+
+
+        <!-- ((((((((((((((((((((( start install and payment section ))))))))))))))))))))) -->
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <!-- ((((((((((((((((((((( end install and payment section ))))))))))))))))))))) -->
+
+
+        <!-- ((((((((((((((((((((( start copy right section  ))))))))))))))))))))) -->
+        <div class="copyright">
+            <p>© 2023, .Net G2 - HTML CSS JS Ecommerce Project</p>
+        </div>
+        <!-- ((((((((((((((((((((( end copy right section ))))))))))))))))))))) -->
+
+    </footer>
+    <!-- ((((((((((((((((((((( end footer  ))))))))))))))))))))) -->
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Circle with Semi-Transparent Color and Text using HTML5 Canvas</title>
+    <script>
+        // Function to draw a circle on the canvas and fill it with a semi-transparent color
+        function drawCircle() {
+            // Get the canvas element
+            var canvas = document.getElementById("myCanvas");
+
+            // Check if the canvas is supported by the browser
+            if (canvas.getContext) {
+                // Get the canvas context
+                var ctx = canvas.getContext("2d");
+
+                // Draw the circle with a semi-transparent color
+                ctx.beginPath();
+                ctx.arc(75, 75, 75, 0, Math.PI * 2, true); // Outer circle
+                ctx.fillStyle = "rgba(0, 0, 155, 0.5)"; // Semi-transparent red color
+                ctx.fill();
+
+                // Write tasneem inside the circle
+                ctx.font = "30px Arial";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText("Tasneem", 75, 75);
+                var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+                gradient.addColorStop("0", "white");
+                gradient.addColorStop("0.5", "blue");
+                gradient.addColorStop("1.0", "green");
+                // Fill with gradient
+                ctx.fillStyle = gradient;
+            }
+        }
+
+        // Call the drawCircle function when the page loads
+        window.onload = function () {
+            drawCircle();
+        };
+    </script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="350" height="350"></canvas>
+</body>
+
+</html>

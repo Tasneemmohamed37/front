@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Add some basic styling to the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>We love to hear from you</h1>
+    <form action="welcome.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="please enter your name"  required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="please enter your email" required>
+
+        <input type="radio"  name="gender" value="Male"> Male 
+        <input type="radio"  name="gender" value="Female" checked="checked"> Female 
+        
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <label for="date">Date & Time:</label>
+        <input type="datetime-local"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

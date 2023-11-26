@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','https://jsonplaceholder.typicode.com/posts',true) ;
+        xhr.onreadystatechange= function(){
+            if(xhr.readyState==4 && xhr.status==200){
+					var dataParsed= JSON.parse(xhr.responseText);
+                    console.log(dataParsed);
+                    displaydata(dataParsed);
+            }
+        }
+        xhr.send();
+
+        function displaydata(d){
+            for(i of d){
+					document.querySelector("#div").innerHTML += i.title +'<br>';
+                    }
+        }
+        
+    </script>
+</body>

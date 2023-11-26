@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">cookie</h1>
+    <div style="text-align: center; margin: 30px; padding:15px ; ;background-color: gainsboro;">
+        <form id="myForm">
+            <h1 >login form</h1>
+
+            <label><b>fullname</b></label><br>
+            <input type="text" id="fname" name="fname" placeholder="Your name.." required><br>
+            <span id="invalid_name"></span>
+            <br>
+
+            <label><b>Email</b></label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label><b>City</b></label>
+            <select id="city" name="city" class="form-select">
+                <option value="minia">minia</option>
+                <option value="cairo">cairo</option>
+                <option value="alex"> alex</option>
+            </select><br><br>
+
+            <label><b>Password</b></label><br>
+            <input type="password" id='pass' required><br>
+
+            <label><b>Repeat Password</b></label><br>
+            <input type="password" id="rPass" required><br><br>
+            <span id="repassShouldBeSame"></span>
+
+            <button type="submit" id="submit">submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("submit").addEventListener("click", fullname_cookie);
+
+        function fullname_cookie() {
+            var fname  = document.getElementById("fname").value;
+            var date = new Date();
+            date.setDate(date.getDate()+3);
+
+            myDate.setDate(d);
+            document.cookie = "fname=" + fname + ";expires=" + date.toUTCString();
+
+        }
+
+    </script>
+</body>
+
+</html>

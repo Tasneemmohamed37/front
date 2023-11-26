@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div  style="text-align: center; margin: 30px; padding:15px ; ;background-color: gainsboro;">
+        <form id="myForm" action="wel.html">
+            <h1>login form</h1>
+
+            <label><b>fullname</b></label><br>
+            <input type="text" id="fname" name="fname" pattern="[A-Za-z]{3,32}" placeholder="Your name.."
+                onfocus="fname_focus()" onblur="fname_blur()" required><br>
+            <span id="invalid_name"></span>
+            <br>
+
+            <label><b>Email</b></label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label><b>City</b></label>
+            <select id="city" name="city" class="form-select">
+                <option value="minia">minia</option>
+                <option value="cairo">cairo</option>
+                <option value="alex"> alex</option>
+            </select><br><br>
+
+            <label><b>Password</b></label><br>
+            <input type="password" id='pass' required><br>
+
+            <label><b>Repeat Password</b></label><br>
+            <input type="password" id="rPass" onblur="check_comfirm()" required><br><br>
+            <span id="repassShouldBeSame"></span>
+
+            <input type="checkbox" id="checkbx" required>
+            <label> I accept the terms and conditions</label><br><br>
+
+            <!-- <input type="button" value="Login" onclick="location.href = 'wel.html';"> -->
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+    <div id="div_img_counter" style="text-align: center; margin: 30px; padding:15px ; ;background-color: gainsboro;">
+        <img src="1.jpg" id="img" name="img1" width="30%" height="50%" onmouseover="playSlider();" onmouseout="clearInterval(c)">
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>

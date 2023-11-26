@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="getLocation()">show location</button>
+    <button onclick="goPosition()">go to location</button>
+    <p id="long"></p>
+    <p id="lat"></p>
+
+    <script>
+        var longitudeCoords = 0;
+        var latitudeCoords = 0;
+
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                console.log(position);
+                longitudeCoords = position.coords.longitude;
+                latitudeCoords = position.coords.latitude;
+                document.getElementById("long").innerHTML = "Logitude: " + longitudeCoords;
+                document.getElementById("lat").innerHTML = "Latitude: " + latitudeCoords;
+            });
+        }
+
+        function goPosition() {
+            var url = "http://maps.google.com/maps?q=" + latitudeCoords + "," + longitudeCoords;
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+
+</html>

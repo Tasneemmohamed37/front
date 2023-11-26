@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: darkgrey;">
+    <br>
+    <div style="width:700px; margin:0 auto; border: 2px solid black ; text-align: center;">
+
+        <h1>Contact Us</h1>
+        <form method="post" action="../html/welcome.html">
+            <label><b>firstName</b></label><br>
+            <input type="text" required name="firstname"><br>
+            <label><b>LastName</b></label><br>
+            <input type="text" required name="LastName"><br>
+            <label><b>Email</b></label><br>
+            <input type="email" required name="email"><br>
+            <!-- not get attribute name to keep pass secret ==get method== -->
+            <label><b>Password</b></label><br>
+            <input type="password" required><br>
+            <label><b>Repeat Password</b></label><br>
+            <input type="password" required><br><br>
+            <label><b>Birthday Date</b></label><br>
+            <input type="date" required name="birthday"><br><br>
+            <label><b>User picture</b></label>
+            <input type="file" name="userPic"><br><br>
+            <label><b>Gender</b></label><br>
+            <input type="radio" name="gender" value="m"> Male <br>
+            <input type="radio" name="gender" value="f"> Female <br><br>
+            <label><b>Faculty</b></label><br>
+            <select name="faculty">
+                <option name="fci">Fci</option>
+                <option name="buc">BUC</option>
+                <option name="auc">AUC</option>
+            </select><br><br>
+            <label><b>Interstes</b></label><br>
+            <input type="checkbox" name="Programming" value="Programming"> Programming<br>
+            <input type="checkbox" name="reading" value="reading"> reading<br>
+            <input type="checkbox" name="swimming" value="swimming"> swimming<br><br>
+            <label><b>About You</b></label><br>
+            <textarea cols="20" rows="3"></textarea><br><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+
+</html>

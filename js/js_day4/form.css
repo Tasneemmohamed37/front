@@ -1,0 +1,21 @@
+#myForm {
+
+    >input[type="text"],
+    >input[type="email"],
+    >input[type="password"] {
+
+        
+        &:valid {
+            background: url("ResourcesforAssignments/ValidNotValid/valid");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 20px 20px;
+
+            
+            /* &+label {
+                opacity: 0;
+            } */
+        }
+    }
+}
+

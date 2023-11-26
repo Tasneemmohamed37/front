@@ -1,0 +1,19 @@
+ERD
+
+Mapping
+
+create tables and insert some data
+
+Daily backup
+
+roles
+01 => admain
+02 => manager
+03 =>instructor
+04 =>student
+
+SP
+01 => istructor set exam by select num of Q
+02 => instructor set exam manually
+03 =>student answer specific exam quest by quest and store his ansews
+04 => mark exam  and calc std degree then check he passed or not
